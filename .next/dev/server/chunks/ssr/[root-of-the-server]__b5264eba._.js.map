@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///Users/Nitesh/Documents/GitHub/CLG-Ecommerce-webfront/src/components/wishlist/WishlistPage.jsx"],"sourcesContent":["export default function WishlistPage() {\n  return <h1>Wishlist UI</h1>;\n}\n"],"names":[],"mappings":";;;;;;AAAe,SAAS;IACtB,qBAAO,8OAAC;kBAAG;;;;;;AACb"}},
+    {"offset": {"line": 37, "column": 0}, "map": {"version":3,"sources":["file:///Users/Nitesh/Documents/GitHub/CLG-Ecommerce-webfront/src/app/wishlist/page.jsx"],"sourcesContent":["import WishlistPage from \"@/components/wishlist/WishlistPage\";\n\nexport default function Wishlist() {\n  return <WishlistPage />;\n}\n"],"names":[],"mappings":";;;;;AAAA;;;AAEe,SAAS;IACtB,qBAAO,8OAAC,yJAAY;;;;;AACtB"}}]
+}

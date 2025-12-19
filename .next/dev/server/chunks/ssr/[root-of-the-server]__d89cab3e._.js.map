@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///Users/Nitesh/Documents/GitHub/CLG-Ecommerce-webfront/src/app/cart/page.jsx"],"sourcesContent":["import React from 'react'\n\nexport const Cart = () => {\n  return (\n    <div><Cart/></div>\n  )\n}\n"],"names":[],"mappings":";;;;;AAAA;;;AAEO,MAAM,OAAO;IAClB,qBACE,8OAAC;kBAAI,cAAA,8OAAC;;;;;;;;;;AAEV"}}]
+}

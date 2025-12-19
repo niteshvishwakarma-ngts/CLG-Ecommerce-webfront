@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///Users/Nitesh/Documents/GitHub/CLG-Ecommerce-webfront/src/components/orders/OrderTrackingPage.jsx"],"sourcesContent":["export default function OrderTrackingPage() {\n  return <h1>Order Tracking UI</h1>;\n}\n"],"names":[],"mappings":";;;;;;AAAe,SAAS;IACtB,qBAAO,8OAAC;kBAAG;;;;;;AACb"}},
+    {"offset": {"line": 37, "column": 0}, "map": {"version":3,"sources":["file:///Users/Nitesh/Documents/GitHub/CLG-Ecommerce-webfront/src/app/orders/page.jsx"],"sourcesContent":["import OrderTrackingPage from \"@/components/orders/OrderTrackingPage\";\n\nexport default function OrderTracking() {\n  return <OrderTrackingPage />;\n}\n"],"names":[],"mappings":";;;;;AAAA;;;AAEe,SAAS;IACtB,qBAAO,8OAAC,4JAAiB;;;;;AAC3B"}}]
+}

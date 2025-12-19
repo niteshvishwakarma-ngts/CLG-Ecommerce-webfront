@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///Users/Nitesh/Documents/GitHub/CLG-Ecommerce-webfront/src/components/checkout/CheckoutPage.jsx"],"sourcesContent":["export default function CheckoutPage() {\n  return <h1>Checkout UI</h1>;\n}\n"],"names":[],"mappings":";;;;;;AAAe,SAAS;IACtB,qBAAO,8OAAC;kBAAG;;;;;;AACb"}},
+    {"offset": {"line": 37, "column": 0}, "map": {"version":3,"sources":["file:///Users/Nitesh/Documents/GitHub/CLG-Ecommerce-webfront/src/app/checkout/page.jsx"],"sourcesContent":["import CheckoutPage from \"@/components/checkout/CheckoutPage\";\n\nexport default function Checkout() {\n  return <CheckoutPage />;\n}\n"],"names":[],"mappings":";;;;;AAAA;;;AAEe,SAAS;IACtB,qBAAO,8OAAC,yJAAY;;;;;AACtB"}}]
+}

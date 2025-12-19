@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///Users/Nitesh/Documents/GitHub/CLG-Ecommerce-webfront/src/components/cart/CartPage.jsx"],"sourcesContent":["export default function CartPage() {\n  return <h1 className=\"p-10 text-2xl\">Cart Page</h1>;\n}\n"],"names":[],"mappings":";;;;;;AAAe,SAAS;IACtB,qBAAO,8OAAC;QAAG,WAAU;kBAAgB;;;;;;AACvC"}},
+    {"offset": {"line": 38, "column": 0}, "map": {"version":3,"sources":["file:///Users/Nitesh/Documents/GitHub/CLG-Ecommerce-webfront/src/app/cart/page.jsx"],"sourcesContent":["import CartPage from '@/components/cart/CartPage'\nimport React from 'react'\n\nexport const Cart = () => {\n  return (\n    <div><CartPage /></div>\n  )\n}\n"],"names":[],"mappings":";;;;;AAAA;AACA;;;;AAEO,MAAM,OAAO;IAClB,qBACE,8OAAC;kBAAI,cAAA,8OAAC,iJAAQ;;;;;;;;;;AAElB"}}]
+}

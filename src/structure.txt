@@ -1,0 +1,146 @@
+src/
+│
+├── app/
+│   ├── layout.jsx
+│   ├── page.jsx                  // Home Page
+│   ├── globals.css
+│
+│   ├── (auth)/
+│   │   ├── login/
+│   │   │   └── page.jsx          // login_page
+│   │   ├── signup/
+│   │   │   └── page.jsx          // signup_page
+│   │   ├── forgot-password/
+│   │   │   └── page.jsx          // forgot_password_page
+│   │   └── reset-password/
+│   │       └── page.jsx          // reset_password_page
+│
+│   ├── products/
+│   │   ├── page.jsx              // product_listing_page
+│   │   └── [id]/
+│   │       └── page.jsx          // product_details_page
+│
+│   ├── cart/
+│   │   └── page.jsx              // cart_page / cart_screen
+│
+│   ├── checkout/
+│   │   └── page.jsx              // checkout_page
+│
+│   ├── wishlist/
+│   │   └── page.jsx              // wishlist_screen
+│
+│   ├── orders/
+│   │   └── tracking/
+│   │       └── page.jsx          // order_tracking_page
+│
+│   ├── profile/
+│   │   └── page.jsx              // user_profile_page
+│
+│   └── api/
+│       ├── auth/
+│       │   └── route.js
+│       ├── products/
+│       │   └── route.js
+│       ├── cart/
+│       │   └── route.js
+│       └── orders/
+│           └── route.js
+│
+├── components/
+│   ├── home/
+│   │   └── HomePage.jsx          // home_page_cricket_ecommerce
+│   │
+│   ├── auth/
+│   │   ├── LoginForm.jsx
+│   │   ├── SignupForm.jsx
+│   │   └── ForgotPasswordForm.jsx
+│   │
+│   ├── product/
+│   │   ├── ProductCard.jsx
+│   │   ├── ProductList.jsx
+│   │   └── ProductDetails.jsx
+│   │
+│   ├── cart/
+│   │   └── CartItems.jsx
+│   │
+│   ├── checkout/
+│   │   └── CheckoutForm.jsx
+│   │
+│   ├── wishlist/
+│   │   └── WishlistItems.jsx
+│   │
+│   ├── orders/
+│   │   └── OrderTracking.jsx
+│   │
+│   └── common/
+│       ├── Navbar.jsx
+│       ├── Footer.jsx
+│       ├── Button.jsx
+│       └── Loader.jsx
+│
+├── redux/
+│   ├── store.js
+│   ├── provider.jsx
+│   └── slices/
+│       ├── authSlice.js
+│       ├── productSlice.js
+│       ├── cartSlice.js
+│       └── wishlistSlice.js
+│
+├── services/
+│   ├── auth.service.js
+│   ├── product.service.js
+│   ├── cart.service.js
+│   └── order.service.js
+│
+├── utils/
+│   ├── api.js
+│   └── localStorage.util.js
+│
+└── public/
+    └── images/
+
+/                     → Home Page
+/login                → Login Page
+/signup               → Signup Page
+/forgot-password      → Forgot Password
+/reset-password       → Reset Password
+/products             → Product Listing
+/products/101         → Product Details
+/cart                 → Cart
+/checkout             → Checkout
+/wishlist             → Wishlist
+/orders/tracking      → Order Tracking
+/profile               → Profile
+
+calling
+
+app/
+│
+├── cart/page.jsx            → calls CartPage
+├── checkout/page.jsx        → calls CheckoutPage
+├── products/page.jsx        → calls ProductListPage
+├── products/[id]/page.jsx   → calls ProductDetailsPage
+├── wishlist/page.jsx        → calls WishlistPage
+├── orders/tracking/page.jsx → calls OrderTrackingPage
+├── profile/page.jsx         → calls ProfilePage
+│
+components/
+│
+├── cart/CartPage.jsx
+├── checkout/CheckoutPage.jsx
+├── product/
+│   ├── ProductListPage.jsx
+│   └── ProductDetailsPage.jsx
+├── wishlist/WishlistPage.jsx
+├── orders/OrderTrackingPage.jsx
+├── profile/ProfilePage.jsx
+
+
+/login
+→ app/(auth)/layout.jsx
+→ LoginPage
+
+/products
+→ app/layout.jsx
+→ Navbar + Products + Footer
