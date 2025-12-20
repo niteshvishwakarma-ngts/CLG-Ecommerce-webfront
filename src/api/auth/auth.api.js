@@ -1,8 +1,8 @@
-import { getTokenLocal } from "@/utils/localStorage.util";
 import ApiRoutes from "@/app/configs/endpoints.config";
  // Import the API Routes
 import HttpClient from "../index.api";
 import { toast } from "react-toastify";
+import { getTokenLocal } from "@/utils/token.util";
 const baseURL = process.env.NEXT_PUBLIC_API_URL;
 
 

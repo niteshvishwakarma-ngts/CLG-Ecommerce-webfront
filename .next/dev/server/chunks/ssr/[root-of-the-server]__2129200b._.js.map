@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///Users/Nitesh/Documents/GitHub/CLG-Ecommerce-webfront/src/components/product/ProductDetailsPage.jsx"],"sourcesContent":["export default function ProductDetailsPage({ id }) {\n  return <h1>Product Details UI – {id}</h1>;\n}\n"],"names":[],"mappings":";;;;;;AAAe,SAAS,mBAAmB,EAAE,EAAE,EAAE;IAC/C,qBAAO,8OAAC;;YAAG;YAAsB;;;;;;;AACnC"}},
+    {"offset": {"line": 40, "column": 0}, "map": {"version":3,"sources":["file:///Users/Nitesh/Documents/GitHub/CLG-Ecommerce-webfront/src/app/products/%5Bid%5D/page.jsx"],"sourcesContent":["import ProductDetailsPage from \"@/components/product/ProductDetailsPage\";\n\nexport default function ProductDetails({ params }) {\n  return <ProductDetailsPage id={params.id} />;\n}\n"],"names":[],"mappings":";;;;;AAAA;;;AAEe,SAAS,eAAe,EAAE,MAAM,EAAE;IAC/C,qBAAO,8OAAC,8JAAkB;QAAC,IAAI,OAAO,EAAE;;;;;;AAC1C"}}]
+}
