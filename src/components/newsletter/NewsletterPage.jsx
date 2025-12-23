@@ -42,7 +42,7 @@ export default function NewsletterPage() {
 
   return (
     <section className="w-full px-4 md:px-6 lg:px-8 py-14 bg-[#f7f8f7]">
-      <div className="max-w-3xl mx-auto bg-white rounded-xl px-6 py-10 text-center shadow-sm">
+      <div className="max-w-9xl mx-auto bg-white rounded-xl px-6 py-18 text-center shadow-sm">
 
         {/* Heading */}
         <h2 className="text-lg md:text-xl font-semibold mb-2">
