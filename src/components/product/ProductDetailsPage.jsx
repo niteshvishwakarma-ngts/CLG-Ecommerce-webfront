@@ -2,8 +2,11 @@
 
 import Image from "next/image";
 import { Star, Heart } from "lucide-react";
+import { useRouter } from "next/navigation";
+
 
 export default function ProductDetailsPage({ id }) {
+  const router = useRouter();
   return (
     <section className="w-full bg-[#f6f7f6] px-4 md:px-6 lg:px-8 py-8">
       <div className="max-w-[1400px] mx-auto">
@@ -201,7 +204,9 @@ export default function ProductDetailsPage({ id }) {
               "download",
             ].map((item) => (
               <div
-                key={item}
+                key={item.id}
+                    onClick={() => router.push(`/products/${item.id}`)}
+
                 className="bg-white rounded-xl p-4 hover:shadow-md transition"
               >
                 <div className="aspect-square bg-gray-100 rounded-lg mb-3 flex items-center justify-center">
@@ -213,7 +218,7 @@ export default function ProductDetailsPage({ id }) {
                   />
                 </div>
                 <p className="text-sm font-medium">
-                  Kookaburra Pro {item}
+                  Kookaburra Pro {item.name}
                 </p>
                 <p className="text-sm text-gray-600">$89.99</p>
               </div>

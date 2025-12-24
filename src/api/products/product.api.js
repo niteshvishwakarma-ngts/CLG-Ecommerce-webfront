@@ -8,7 +8,7 @@ class Product extends HttpClient {
 
   getTopPicks = async () => {
     const res = await this.get(ApiRoutes.products.topPicks.Endpoint);
-    console.log("API INSIDE product.api 👉", res); // 🔥 PROOF
+    console.log("API INSIDE product.api 👉", res); 
     return res;
   };
 

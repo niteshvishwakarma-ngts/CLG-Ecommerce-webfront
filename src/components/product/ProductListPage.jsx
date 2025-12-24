@@ -3,39 +3,47 @@
 
 import Image from "next/image";
 import { ChevronDown } from "lucide-react";
+import { useRouter } from "next/navigation";
+
 
 const products = [
   {
+    id: "1",
     brand: "Kookaburra",
     name: "Kahuna Pro Bat",
     price: "$450.00",
     image: "/download.jpeg",
   },
   {
+    id: "2",
     brand: "Gray-Nicolls",
     name: "Hypernova 1.0",
     price: "$399.00",
     image: "/download.jpeg",
   },
   {
+    id: "3",
     brand: "New Balance",
     name: "DC 1080",
     price: "$520.00",
     image: "/download.jpeg",
   },
   {
+    id: "4",
     brand: "SG",
     name: "Sunny Tonny Icon",
     price: "$350.00",
     image: "/download.jpeg",
   },
   {
+    id: "5",
     brand: "Kookaburra",
     name: "Ghost Pro 4.0",
     price: "$290.00",
     image: "/download.jpeg",
   },
   {
+    id: "6",
     brand: "New Balance",
     name: "TC 560",
     price: "$250.00",
@@ -43,7 +51,10 @@ const products = [
   },
 ];
 
+
 export default function ProductListPage() {
+  const router = useRouter();
+
     return (
     <section className="w-full bg-[#f6f7f6] px-4 md:px-6 lg:px-8 py-8">
       <div className="max-w-[1400px] mx-auto">
@@ -133,11 +144,13 @@ export default function ProductListPage() {
           {/* PRODUCTS */}
           <div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {products.map((item, index) => (
-                <div
-                  key={index}
-                  className="bg-white rounded-xl p-4 hover:shadow-md transition"
-                >
+              {products.map((item) => (
+  <div
+    key={item.id}
+    onClick={() => router.push(`/products/${item.id}`)}
+    className="bg-white rounded-xl p-4 hover:shadow-md transition cursor-pointer"
+  >
+
                   <div className="aspect-square bg-[#eef0ee] rounded-lg flex items-center justify-center mb-4">
                     <Image
                       src={item.image}

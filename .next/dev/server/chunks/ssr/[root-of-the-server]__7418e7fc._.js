@@ -451,7 +451,7 @@ class Product extends __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$api
     }
     getTopPicks = async ()=>{
         const res = await this.get(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$configs$2f$endpoints$2e$config$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].products.topPicks.Endpoint);
-        console.log("API INSIDE product.api 👉", res); // 🔥 PROOF
+        console.log("API INSIDE product.api 👉", res);
         return res;
     };
     getProductDetails = async (id)=>{
@@ -565,8 +565,8 @@ function ProductPage() {
                                 columnNumber: 15
                             }, this)),
                         !loading && Array.isArray(products) && products.map((product)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: " group relative cursor-pointer min-w-[220px] sm:min-w-[240px] md:min-w-0 flex-shrink-0 ",
-                                onClick: ()=>router.push(`/product/${product._id}`),
+                                className: " group relative cursor-pointer min-w-[220px] sm:min-w-[240px] md:min-w-0 shrink-0 ",
+                                onClick: ()=>router.push(`/products?category=${product.category}`),
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                         onClick: (e)=>{
@@ -579,12 +579,12 @@ function ProductPage() {
                                             className: wishlist[product._id] ? "fill-red-500 text-red-500" : "text-gray-400"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/home/ProductPage.jsx",
-                                            lineNumber: 101,
+                                            lineNumber: 105,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/home/ProductPage.jsx",
-                                        lineNumber: 94,
+                                        lineNumber: 98,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -597,12 +597,12 @@ function ProductPage() {
                                             className: "object-contain group-hover:scale-105 transition"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/home/ProductPage.jsx",
-                                            lineNumber: 113,
+                                            lineNumber: 117,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/home/ProductPage.jsx",
-                                        lineNumber: 112,
+                                        lineNumber: 116,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -613,7 +613,7 @@ function ProductPage() {
                                                 children: product.name
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/home/ProductPage.jsx",
-                                                lineNumber: 124,
+                                                lineNumber: 128,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -624,13 +624,13 @@ function ProductPage() {
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/home/ProductPage.jsx",
-                                                lineNumber: 127,
+                                                lineNumber: 131,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/home/ProductPage.jsx",
-                                        lineNumber: 123,
+                                        lineNumber: 127,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -642,7 +642,7 @@ function ProductPage() {
                                         children: "Add to Cart"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/home/ProductPage.jsx",
-                                        lineNumber: 133,
+                                        lineNumber: 137,
                                         columnNumber: 17
                                     }, this)
                                 ]

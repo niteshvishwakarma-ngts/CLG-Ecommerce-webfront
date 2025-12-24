@@ -86,9 +86,13 @@ export default function ProductPage() {
                 className="
                   group relative cursor-pointer
                   min-w-[220px] sm:min-w-[240px]
-                  md:min-w-0 flex-shrink-0
+                  md:min-w-0 shrink-0
                 "
-                onClick={() => router.push(`/product/${product._id}`)}
+onClick={() =>
+  router.push(
+    `/products?category=${product.category}`
+  )
+}
               >
                 {/* Wishlist */}
                 <button

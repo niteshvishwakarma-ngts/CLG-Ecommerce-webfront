@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/Nitesh/Documents/GitHub/CLG-Ecommerce-webfront/src/components/auth/LoginPage.jsx"],"sourcesContent":["\"use client\";\n\nimport Input from \"@/components/common/Input\";\nimport Button from \"@/components/common/Button\";\n\nexport default function LoginPage() {\n  return (\n    <div className=\"max-w-md mx-auto p-6\">\n      <h1 className=\"text-2xl font-semibold mb-4\">Login</h1>\n\n      <Input label=\"Email\" type=\"email\" />\n      <Input label=\"Password\" type=\"password\" />\n\n      <Button text=\"Login\" />\n    </div>\n  );\n}\n"],"names":[],"mappings":";;;;;;;;;;;;;;;AAAA;;;;AAKe,SAAS;IACtB,qBACE,8OAAC;QAAI,WAAU;;0BACb,8OAAC;gBAAG,WAAU;0BAA8B;;;;;;0BAE5C,8OAAC;gBAAM,OAAM;gBAAQ,MAAK;;;;;;0BAC1B,8OAAC;gBAAM,OAAM;gBAAW,MAAK;;;;;;0BAE7B,8OAAC;gBAAO,MAAK;;;;;;;;;;;;AAGnB"}}]
+}
