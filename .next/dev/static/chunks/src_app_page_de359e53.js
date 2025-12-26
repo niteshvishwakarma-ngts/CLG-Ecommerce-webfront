@@ -7,7 +7,7 @@
   "static/chunks/node_modules_next_00cde820._.js",
   "static/chunks/node_modules_axios_lib_99e19c7d._.js",
   "static/chunks/node_modules_065be2b5._.js",
-  "static/chunks/src_c03ec498._.js",
+  "static/chunks/src_cca83f89._.js",
   "static/chunks/node_modules_swiper_1cc27f2c._.css"
 ],
     source: "dynamic"

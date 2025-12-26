@@ -107,9 +107,13 @@ export default function ProductDetailsPage({ id }) {
                 defaultValue={1}
                 className="w-16 border rounded-md text-center py-2"
               />
-              <button className="flex-1 bg-green-500 text-white rounded-md py-2 text-sm">
-                Add to Cart
-              </button>
+              <button
+  onClick={() => router.push("/cart")}
+  className="flex-1 bg-green-500 text-white rounded-md py-2 text-sm"
+>
+  Add to Cart
+</button>
+
               <button className="p-2 border rounded-md">
                 <Heart size={18} />
               </button>

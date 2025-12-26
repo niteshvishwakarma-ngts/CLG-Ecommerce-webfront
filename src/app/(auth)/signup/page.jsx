@@ -1,8 +1,9 @@
 import React from 'react'
-import Signup from './_components/signup-form'
+import SignupPage from '@/components/auth/SignupPage'
 
 export default function page (){
   return (
-    <Signup/>
+<SignupPage />
+  
   )
 }

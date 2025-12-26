@@ -10,12 +10,13 @@ import { useState } from "react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import CategoryStripPage from "../categorystrip/page";
 
 const slides = [
   {
     title: "Unleash Your Power",
     subtitle: "Shop the Latest 2024 Cricket Bats",
-    image: "/heroimage.png",
+    image: "/strip.webp",
   },
   {
     title: "Play Like a Pro",
@@ -33,8 +34,10 @@ export default function HomePage() {
   const [loadedSlides, setLoadedSlides] = useState({});
 
   return (
+    <>
+    <CategoryStripPage />
     <section className="w-full px-4 md:px-6 lg:px-8 mt-4">
-      <div className="max-w-[1400px] mx-auto rounded-xl overflow-hidden relative">
+      <div className="max-w-[1400px] mx-auto  overflow-hidden relative">
 
         <Swiper
           modules={[Autoplay, Pagination, Navigation]}
@@ -44,14 +47,14 @@ export default function HomePage() {
             disableOnInteraction: false,
             pauseOnMouseEnter: true, // Pause on hover
           }}
-          pagination={{ type: "progressbar" }}
+          // pagination={{ type: "progressbar" }}
           navigation
           className="w-full"
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>
               <div
-                className="relative w-full h-[240px] sm:h-[330px] md:h-[460px] lg:h-[550px]"
+                className="relative w-full h-[240px] sm:h-[330px] md:h-[460px] lg:h-[330px]"
               >
                 {/* Skeleton Loader */}
                 {!loadedSlides[index] && (
@@ -120,5 +123,6 @@ export default function HomePage() {
 
       </div>
     </section>
+    </>
   );
 }

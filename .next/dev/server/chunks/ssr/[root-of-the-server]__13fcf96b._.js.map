@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 22, "column": 0}, "map": {"version":3,"sources":["file:///Users/Nitesh/Documents/GitHub/CLG-Ecommerce-webfront/src/app/%28auth%29/signup/page.jsx"],"sourcesContent":["import React from 'react'\nimport Signup from './_components/signup-form'\n\nexport default function page (){\n  return (\n    <Signup/>\n  )\n}\n"],"names":[],"mappings":";;;;;AAAA;;;;;;;;;AAGe,SAAS;IACtB,qBACE,8OAAC;;;;;AAEL"}}]
+}

@@ -7,10 +7,14 @@ import {
   FiShoppingCart,
   FiMenu,
   FiX,
+  FiUser,
 } from "react-icons/fi";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+
+  // 🔐 later replace with auth state
+  const isLoggedIn = true;
 
   return (
     <header className="w-full bg-white border-b sticky top-0 z-50">
@@ -27,21 +31,11 @@ export default function Navbar() {
 
           {/* DESKTOP MENU */}
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
-            <Link href="/products?brand=Bats" className="hover:text-green-500">
-              Bats
-            </Link>
-            <Link href="/products?brand=Balls" className="hover:text-green-500">
-              Balls
-            </Link>
-            <Link href="/products?brand=Pads" className="hover:text-green-500">
-              Pads
-            </Link>
-            <Link href="/products?brand=Gloves" className="hover:text-green-500">
-              Gloves
-            </Link>
-            <Link href="/products?brand=Helmets" className="hover:text-green-500">
-              Helmets
-            </Link>
+            <Link href="/products?brand=Bats" className="hover:text-green-500">Bats</Link>
+            <Link href="/products?brand=Balls" className="hover:text-green-500">Balls</Link>
+            <Link href="/products?brand=Pads" className="hover:text-green-500">Pads</Link>
+            <Link href="/products?brand=Gloves" className="hover:text-green-500">Gloves</Link>
+            <Link href="/products?brand=Helmets" className="hover:text-green-500">Helmets</Link>
           </nav>
 
           {/* SEARCH + ACTIONS */}
@@ -56,20 +50,31 @@ export default function Navbar() {
               />
             </div>
 
-            {/* Auth */}
-            <Link
-              href="/login"
-              className="text-sm font-medium px-4 py-1.5 rounded-full bg-gray-100 hover:bg-gray-200"
-            >
-              Log In
-            </Link>
-
-            <Link
-              href="/signup"
-              className="text-sm font-medium px-4 py-1.5 rounded-full bg-green-500 text-white hover:bg-green-600"
-            >
-              Sign Up
-            </Link>
+            {/* DASHBOARD / AUTH */}
+            {isLoggedIn ? (
+              <Link
+                href="/dashboard"
+                className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-green-100 text-green-700 text-sm font-medium hover:bg-green-200"
+              >
+                <FiUser size={16} />
+                Dashboard
+              </Link>
+            ) : (
+              <>
+                <Link
+                  href="/login"
+                  className="text-sm font-medium px-4 py-1.5 rounded-full bg-gray-100 hover:bg-gray-200"
+                >
+                  Log In
+                </Link>
+                <Link
+                  href="/signup"
+                  className="text-sm font-medium px-4 py-1.5 rounded-full bg-green-500 text-white hover:bg-green-600"
+                >
+                  Sign Up
+                </Link>
+              </>
+            )}
 
             {/* Cart */}
             <Link href="/cart" className="relative">
@@ -78,10 +83,7 @@ export default function Navbar() {
           </div>
 
           {/* MOBILE MENU BUTTON */}
-          <button
-            className="md:hidden"
-            onClick={() => setOpen(!open)}
-          >
+          <button className="md:hidden" onClick={() => setOpen(!open)}>
             {open ? <FiX size={22} /> : <FiMenu size={22} />}
           </button>
         </div>
@@ -92,21 +94,23 @@ export default function Navbar() {
         <div className="md:hidden border-t bg-white">
           <div className="px-4 py-4 space-y-4 text-sm">
 
-            <Link href="/products?brand=Bats" onClick={() => setOpen(false)}>
-              Bats
-            </Link>
-            <Link href="/products?brand=Balls" onClick={() => setOpen(false)}>
-              Balls
-            </Link>
-            <Link href="/products?brand=Pads" onClick={() => setOpen(false)}>
-              Pads
-            </Link>
-            <Link href="/products?brand=Gloves" onClick={() => setOpen(false)}>
-              Gloves
-            </Link>
-            <Link href="/products?brand=Helmets" onClick={() => setOpen(false)}>
-              Helmets
-            </Link>
+            <Link href="/products?brand=Bats" onClick={() => setOpen(false)}>Bats</Link>
+            <Link href="/products?brand=Balls" onClick={() => setOpen(false)}>Balls</Link>
+            <Link href="/products?brand=Pads" onClick={() => setOpen(false)}>Pads</Link>
+            <Link href="/products?brand=Gloves" onClick={() => setOpen(false)}>Gloves</Link>
+            <Link href="/products?brand=Helmets" onClick={() => setOpen(false)}>Helmets</Link>
+
+            {/* Dashboard */}
+            {isLoggedIn && (
+              <Link
+                href="/dashboard"
+                onClick={() => setOpen(false)}
+                className="flex items-center gap-2 font-medium text-green-600"
+              >
+                <FiUser />
+                Dashboard
+              </Link>
+            )}
 
             {/* Search */}
             <div className="relative">
@@ -118,27 +122,20 @@ export default function Navbar() {
               />
             </div>
 
-            {/* Auth buttons */}
-            <div className="flex gap-3 pt-2">
-              <Link
-                href="/login"
-                className="flex-1 text-center py-2 rounded-full bg-gray-100"
-              >
-                Log In
-              </Link>
-              <Link
-                href="/signup"
-                className="flex-1 text-center py-2 rounded-full bg-green-500 text-white"
-              >
-                Sign Up
-              </Link>
-            </div>
+            {/* Auth */}
+            {!isLoggedIn && (
+              <div className="flex gap-3 pt-2">
+                <Link href="/login" className="flex-1 text-center py-2 rounded-full bg-gray-100">
+                  Log In
+                </Link>
+                <Link href="/signup" className="flex-1 text-center py-2 rounded-full bg-green-500 text-white">
+                  Sign Up
+                </Link>
+              </div>
+            )}
 
             {/* Cart */}
-            <Link
-              href="/cart"
-              className="flex items-center gap-2 pt-2"
-            >
+            <Link href="/cart" className="flex items-center gap-2 pt-2">
               <FiShoppingCart />
               Cart
             </Link>
